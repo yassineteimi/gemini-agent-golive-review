@@ -56,7 +56,7 @@ This starts `adk run agent`, ADK's terminal chat, on the stub model. Type a ques
 !!! note "This is the stub model, not Gemini"
     The stub doesn't write an answer. It quotes the passage that best matches the question and lists up to three documents that share at least one keyword with it, which is why a weaker second source shows up in both examples below. A real model would phrase the answer itself and cite only the documents it used.
 
-    The search behind it is plain keyword matching: lowercase, accents stripped, crude plural folding, no meaning. Three sentences in `data/` were reworded so that the passage holding the figure ranks first for the test questions. That's tuning the documents to a simple matcher, and it says nothing about how Gemini would rank them.
+    The search behind it is plain keyword matching: lowercase, accents stripped, crude plural folding, no meaning. Four sentences in two documents in `data/` were reworded so that the passage holding the figure ranks first for the 14 test questions in [`tests/smoke/questions.json`](https://github.com/yassineteimi/gemini-agent-golive-review/blob/main/tests/smoke/questions.json), which `make smoke` runs. That's tuning the documents to a simple matcher, and it says nothing about how Gemini would rank them.
 
 ```text
 --- EN ---
