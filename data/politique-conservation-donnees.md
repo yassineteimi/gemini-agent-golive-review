@@ -6,7 +6,7 @@ Propriétaire : Direction de la conformité, avec le délégué à la protection
 
 ## Objet
 
-Cette politique fixe combien de temps Banque Ardoise garde chaque catégorie de données, où elle les garde et qui peut les effacer. Elle s'applique à tous les systèmes de la banque, y compris les outils d'IA qui lisent des documents internes. Un document lu par un agent d'IA reste soumis à la durée de conservation de sa catégorie : le fait qu'il ait servi à répondre à une question ne prolonge pas cette durée.
+Cette politique fixe combien de temps Banque Ardoise garde chaque catégorie de données, où elle les garde et qui peut les effacer. Elle s'applique à tous les systèmes de la banque, y compris ses outils d'IA. Un document lu par un agent d'IA reste soumis à la durée de conservation de sa catégorie : le fait qu'il ait servi à produire une réponse ne prolonge pas cette durée.
 
 ## Durées de conservation
 

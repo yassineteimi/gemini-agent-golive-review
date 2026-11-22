@@ -15,6 +15,7 @@ The brief said "everything in Paris". The first check, before any code, found th
 
 | Page | What it answers |
 |---|---|
+| [Run it locally](run-locally.md) | How to install, test and chat with the agent offline, and what the stub's answers look like |
 | [Architecture](architecture.md) | What phase 0 builds, what later phases add, and where each part runs |
 | [Feasibility scorecard](feasibility-scorecard.md) | The questions a bank asks before go-live, and how and when this project tests each one |
 | [ADR 0001](adr/0001-adk-first-langgraph-later.md) | Why ADK first and a LangGraph orchestrator later, with the frameworks left out |
@@ -27,7 +28,7 @@ The brief said "everything in Paris". The first check, before any code, found th
 |---|---|---|
 | 0 | ADK agent answering from four fictional documents, Gemini configured for the `eu` endpoint but not called, offline tests in CI, scorecard draft, ADR 0001, this site | In progress |
 | 1 | Sign-in through Keycloak (OIDC); each user sees only their own documents through an MCP server; several ADK agents with routing | Planned |
-| 2 | Residency pinned service by service, audit trail, guardrails, first live Gemini calls | Planned |
+| 2 | Each service pinned to `europe-west9` or to the nearest EU option, with a written finding where Paris isn't offered; audit trail; guardrails | Planned |
 | 3 | Orchestrator rebuilt in LangGraph, talking to the ADK agents over A2A | Planned |
 | 4 | Go-live write-up: integration design, engagement request for the Forward Deployed Engineering team, bug and workaround log | Planned |
 

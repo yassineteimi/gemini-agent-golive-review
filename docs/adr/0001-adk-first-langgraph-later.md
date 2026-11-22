@@ -28,7 +28,7 @@ The answer changes if Banque Ardoise has no orchestration code of its own: optio
 
 - The bank gets agents that deploy to Agent Runtime with the standard tooling, and an orchestrator that could be swapped for its own without touching them. It also gets two frameworks to keep current, plus the A2A endpoint to secure: the user's identity has to travel across that hop, which phase 1's identity work must allow for.
 - Phase 0 pins `google-adk` 2.15.0 ([F1](../findings.md#f1-adk-release-and-python-support)). LangGraph and the A2A SDK get pinned in phase 3, at whatever is current then.
-- This PoC can't show production behaviour: the model is a stub until phase 2, the data is fictional, and there's no real load. The A2A part stays unverified until phase 3 runs it.
+- This PoC can't show production behaviour: the model stays a stub until phase 2 at the earliest, the data is fictional, and there's no real load. The A2A part stays unverified until phase 3 runs it.
 
 ## Evidence
 

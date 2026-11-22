@@ -81,6 +81,7 @@ validation:
 
 nav:
   - Home: index.md
+  - Run it locally: run-locally.md
   - Architecture: architecture.md
   - Feasibility scorecard: feasibility-scorecard.md
   - Decisions:

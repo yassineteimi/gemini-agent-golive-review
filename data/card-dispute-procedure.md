@@ -6,18 +6,18 @@ Owner: Payments Operations. Version 3.2, effective 1 September 2026. Applies to 
 
 ## When this procedure applies
 
-Use it when a customer says a card payment on their account is wrong. Three cases are in scope: a payment the customer didn't make (unauthorised), a payment they made but for the wrong amount, and a payment for goods or services that never arrived. Cash withdrawals at another bank's ATM count as card payments here. Transfers and direct debits follow the separate payment dispute procedure.
+Use it when a customer says a card payment on their account is wrong. Three cases are in scope: a payment the customer didn't make, a payment they made but for the wrong amount, and a payment for goods or services that never arrived. Cash withdrawals at another bank's ATM count as card payments here. Transfers and direct debits follow the separate payment dispute procedure.
 
 ## First contact
 
 1. Block the card straight away in the card system if the customer reports a lost or stolen card or a payment they didn't make. Don't wait for the paperwork.
-2. Check the transaction date. A customer has 13 months from the debit date to dispute an unauthorised payment. After that, explain the limit and log the request as a complaint instead.
+2. Check the transaction date. A customer has 13 months from the debit date to dispute an unauthorised card payment. After that, explain the limit and log the request as a complaint instead.
 3. Ask for the disputed amount, the merchant name as it appears on the statement, and whether the card is still in the customer's hands.
 4. Open a dispute file in the card system and give the customer the file reference, which starts with `LD-`.
 
 ## Unauthorised payments
 
-The bank refunds an unauthorised payment by the end of the next business day after the report, unless the adviser has a documented reason to suspect fraud by the customer. In that case the adviser escalates to the Fraud Unit the same day and doesn't refund until the Fraud Unit decides.
+The bank refunds an unauthorised card payment by the end of the next business day after the report, unless the adviser has a documented reason to suspect fraud by the customer. In that case the adviser escalates to the Fraud Unit the same day and doesn't refund until the Fraud Unit decides.
 
 The customer bears the first 50 EUR of losses that occurred before they reported the card lost or stolen. That excess doesn't apply when the payment was made online without strong customer authentication, or when the customer couldn't have noticed the loss before the payment.
 

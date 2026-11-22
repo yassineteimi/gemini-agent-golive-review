@@ -9,7 +9,7 @@ flowchart LR
 
     subgraph p0["Phase 0: built now, runs offline"]
         root["ADK root agent"]
-        stub["Stub model<br/>canned answers"]
+        stub["Stub model<br/>quotes the best passage"]
         files[("data/<br/>4 fictional documents")]
     end
 
@@ -56,8 +56,8 @@ Solid boxes and arrows are what phase 0 builds and runs on a laptop with no netw
 | Part | Phase | What it does here |
 |---|---|---|
 | ADK root agent | 0 | Answers staff questions from the documents in `data/`. Built with `google-adk` 2.15.0 ([F1](findings.md#f1-adk-release-and-python-support)). |
-| Stub model | 0 | Implements ADK's model interface and returns canned answers, so tests need no credentials and cost nothing. Listed in [What is simulated](simulated.md). |
-| Gemini on the `eu` endpoint | Configured in 0, called from 2 | `gemini-3.8-flash` with `GOOGLE_CLOUD_LOCATION=eu` and `GOOGLE_GENAI_USE_ENTERPRISE=true` ([F2](findings.md#f2-vertex-ai-renamed-and-the-switch-that-goes-with-it)). The SDK sends `eu` to `aiplatform.eu.rep.googleapis.com` by itself. |
+| Stub model | 0 | Implements ADK's model interface. It calls the document search tool, then quotes the best-matching passage and its sources instead of writing an answer, so tests need no credentials and cost nothing. Sample output on [Run it locally](run-locally.md). Listed in [What is simulated](simulated.md). |
+| Gemini on the `eu` endpoint | Configured in 0, not called before 2 | `gemini-3.8-flash` with `GOOGLE_CLOUD_LOCATION=eu` and `GOOGLE_GENAI_USE_ENTERPRISE=true` ([F2](findings.md#f2-vertex-ai-renamed-and-the-switch-that-goes-with-it)). The SDK sends `eu` to `aiplatform.eu.rep.googleapis.com` by itself. |
 | Keycloak | 1 | Stands in for the bank's identity provider. Staff sign in once; the agents act with that user's rights. The choice between Keycloak and Google Cloud identity services is ADR 0002. |
 | MCP server | 1 | Sits in front of the document store and returns only what the signed-in user may read, following the bank's [internal access policy](https://github.com/yassineteimi/gemini-agent-golive-review/blob/main/data/internal-access-policy.md). The alternative, Gemini Enterprise's own connectors, is ADR 0003. |
 | ADK agents | 1 | One agent per domain (payments, compliance, HR) with routing from the root agent. |
