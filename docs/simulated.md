@@ -14,7 +14,7 @@ Phase 0 runs on a laptop and in GitHub Actions with no Google Cloud credentials.
 
 The stub doesn't write answers. It calls the agent's `search_documents` tool, which does plain keyword matching over `data/`. It then quotes the best-matching passage (a paragraph, a list item, or a table row with its header) and lists up to three documents that share any keyword with the question. A real model would phrase the answer and cite only what it used.
 
-A set of 14 test questions gives the expected document and figure for each. A question passes when the right document ranks first and the expected figure appears in the quoted passage:
+A set of 14 test questions, in [`tests/smoke/questions.json`](https://github.com/yassineteimi/gemini-agent-golive-review/blob/main/tests/smoke/questions.json), gives the expected document and figures for each. A question passes when the stub agent cites the right document first and every expected figure appears in its answer. `make smoke` runs them, and CI runs them on every push:
 
 | Step | Passed |
 |---|---|
