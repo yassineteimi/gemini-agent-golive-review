@@ -1,10 +1,14 @@
-.PHONY: install test lint format run
+.PHONY: install test smoke lint format run
 
 install:
 	uv sync --locked
 
 test:
 	uv run pytest
+
+# The stub agent against the real data/ documents (tests/smoke/questions.json).
+smoke:
+	uv run pytest -m smoke
 
 lint:
 	uv run ruff check .

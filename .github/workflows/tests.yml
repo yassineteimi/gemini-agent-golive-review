@@ -28,3 +28,5 @@ jobs:
         run: make lint
       - name: Test (offline, no Google Cloud credentials)
         run: make test
+      - name: Smoke questions against data/ (stub model, offline)
+        run: make smoke

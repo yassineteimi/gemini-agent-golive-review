@@ -1,0 +1,93 @@
+{
+  "description": "Smoke questions for the stub agent against the real data/ documents. Each question is in its document's language, since keyword search doesn't cross EN/FR. A question passes when the expected document is the first source and every expected figure appears in the answer. SIMULATED: the stub quotes the best-matching passage; it doesn't write an answer (docs/simulated.md).",
+  "questions": [
+    {
+      "id": 1,
+      "question": "How long does a customer have to dispute an unauthorised card payment?",
+      "document": "card-dispute-procedure.md",
+      "figures": ["13 months"]
+    },
+    {
+      "id": 2,
+      "question": "When does the bank refund an unauthorised card payment?",
+      "document": "card-dispute-procedure.md",
+      "figures": ["end of the next business day"]
+    },
+    {
+      "id": 3,
+      "question": "What loss does the customer bear before reporting a lost or stolen card?",
+      "document": "card-dispute-procedure.md",
+      "figures": ["50 EUR"]
+    },
+    {
+      "id": 4,
+      "question": "What is the scheme deadline for a chargeback?",
+      "document": "card-dispute-procedure.md",
+      "figures": ["120 days"]
+    },
+    {
+      "id": 5,
+      "question": "Who approves a disputed amount of 2,000 EUR refund?",
+      "document": "card-dispute-procedure.md",
+      "figures": ["Branch manager", "5,000 EUR"]
+    },
+    {
+      "id": 6,
+      "question": "Combien de temps conserve-t-on les enregistrements des appels du centre de relation client ?",
+      "document": "politique-conservation-donnees.md",
+      "figures": ["6 mois"]
+    },
+    {
+      "id": 7,
+      "question": "Quelle est la durée de conservation des relevés et de l'historique des opérations ?",
+      "document": "politique-conservation-donnees.md",
+      "figures": ["10 ans"]
+    },
+    {
+      "id": 8,
+      "question": "Combien de temps garde-t-on les questions posées à un assistant d'IA interne ?",
+      "document": "politique-conservation-donnees.md",
+      "figures": ["90 jours"]
+    },
+    {
+      "id": 9,
+      "question": "Quel est le délai pour envoyer l'accusé de réception d'une réclamation ?",
+      "document": "procedure-reclamations.md",
+      "figures": ["10 jours ouvrés"]
+    },
+    {
+      "id": 10,
+      "question": "Quel est le délai de réponse à une réclamation sur un service de paiement ?",
+      "document": "procedure-reclamations.md",
+      "figures": ["15 jours ouvrés"],
+      "partial": {
+        "missing": "35 jours ouvrés",
+        "reason": "The 35-business-day exception is a separate table row. The stub returns one row per answer, so it gives the 15-day deadline without the exception. Stub limitation, not a product finding."
+      }
+    },
+    {
+      "id": 11,
+      "question": "Quand le client peut-il saisir le médiateur ?",
+      "document": "procedure-reclamations.md",
+      "figures": ["deux mois"]
+    },
+    {
+      "id": 12,
+      "question": "How quickly are accounts disabled when an employee leaves?",
+      "document": "internal-access-policy.md",
+      "figures": ["within 4 hours"]
+    },
+    {
+      "id": 13,
+      "question": "How often do managers review their team's access?",
+      "document": "internal-access-policy.md",
+      "figures": ["each quarter", "15 business days"]
+    },
+    {
+      "id": 14,
+      "question": "What is the minimum password length?",
+      "document": "internal-access-policy.md",
+      "figures": ["14 characters"]
+    }
+  ]
+}

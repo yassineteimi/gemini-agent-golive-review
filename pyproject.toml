@@ -21,6 +21,9 @@ package = false
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 pythonpath = ["."]
+# Smoke questions run against the real data/; `make smoke` selects them with -m smoke.
+addopts = "-m 'not smoke'"
+markers = ["smoke: end-to-end questions against the real data/ documents"]
 asyncio_mode = "auto"
 asyncio_default_fixture_loop_scope = "function"
 
