@@ -4,8 +4,8 @@
 
 ## Durées de conservation
 
-Les relevés de compte sont conservés pendant 10 ans après la clôture du compte.
-
-## Suppression
-
-Les enregistrements téléphoniques sont supprimés au bout de 6 mois.
+| Catégorie | Durée | Point de départ |
+|---|---|---|
+| Relevés de compte | 10 ans | Clôture du compte |
+| Pièces d'identité | 5 ans | Clôture du compte |
+| Enregistrements téléphoniques | 6 mois | Date de l'appel |
