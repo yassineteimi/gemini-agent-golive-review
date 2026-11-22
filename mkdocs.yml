@@ -1,0 +1,93 @@
+site_name: "Gemini agent go-live review: Banque Ardoise"
+site_url: https://yassineteimi.github.io/gemini-agent-golive-review/
+site_author: Yassine TEIMI
+site_description: >-
+  Go-live review of an AI agent for a fictional regulated French bank: ADK on
+  Gemini Enterprise Agent Platform, identity, connectors and EU data residency.
+  Work in progress, phase 0 of 4.
+
+repo_name: yassineteimi/gemini-agent-golive-review
+repo_url: https://github.com/yassineteimi/gemini-agent-golive-review
+edit_uri: ""
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+  language: en
+  palette:
+    - scheme: slate
+      toggle: { icon: material/toggle-switch, name: Switch to light mode }
+      primary: teal
+      accent: lime
+    - scheme: default
+      toggle: { icon: material/toggle-switch-off-outline, name: Switch to dark mode }
+      primary: teal
+      accent: purple
+
+extra_css:
+  - stylesheets/terminal.css
+
+extra:
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/yassineteimi
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/in/yassine-teimi
+
+markdown_extensions:
+  - pymdownx.highlight: { anchor_linenums: true }
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.mark
+  - pymdownx.tabbed: { alternate_style: true }
+  - attr_list
+  - md_in_html
+  - footnotes
+  - tables
+
+plugins:
+  - search
+
+# Local-only notes and the ADR template stay out of the published site.
+exclude_docs: |
+  coordination/
+  adr/0000-template.md
+
+validation:
+  nav:
+    omitted_files: warn
+    not_found: warn
+  links:
+    not_found: warn
+    anchors: warn
+    absolute_links: info
+    unrecognized_links: warn
+
+nav:
+  - Home: index.md
+  - Architecture: architecture.md
+  - Feasibility scorecard: feasibility-scorecard.md
+  - Decisions:
+      - adr/README.md
+      - "ADR 0001: ADK first, LangGraph later": adr/0001-adk-first-langgraph-later.md
+  - Findings: findings.md
+  - What is simulated: simulated.md
+
+copyright: |
+  &copy; 2026 <a href="https://github.com/yassineteimi" target="_blank" rel="noopener">Yassine TEIMI</a>. Banque Ardoise is fictional.

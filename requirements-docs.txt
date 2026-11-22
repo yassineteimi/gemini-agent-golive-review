@@ -1,0 +1,5 @@
+# Documentation site only. The agent's dependencies live in pyproject.toml.
+mkdocs==1.6.1
+mkdocs-material==9.5.49
+pymdown-extensions==10.21.3
+markdown==3.9
