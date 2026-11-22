@@ -10,7 +10,7 @@ It's written for engineers who know the platform and want evidence rather than c
 
 ## What the first check found
 
-The brief said "run everything in Paris". Before any code, the region checks showed that no current Gemini model, Agent Runtime or session store runs in `europe-west9`, and that the only Gemini model that processed data inside France retired on 20 October 2026. The SDK also accepts `europe-west9` silently and fails only on the first real call. The design therefore uses the `eu` multi-region, which keeps processing inside the EU, and Paris residency becomes the phase 2 question. All seven findings, with sources: [docs/findings.md](docs/findings.md).
+The brief said "run everything in Paris". Before any code, the region checks showed that no current Gemini model, Agent Runtime or session store runs in `europe-west9`, and that the only Gemini model that processed data inside France retired on 20 October 2026. The SDK also accepts `europe-west9` silently and fails only on the first real call. The design therefore uses the `eu` multi-region, which keeps processing inside the EU, and Paris residency becomes the phase 2 question. All eight findings, with sources: [docs/findings.md](docs/findings.md).
 
 ## Target architecture
 
@@ -20,7 +20,7 @@ flowchart LR
 
     subgraph p0["Phase 0: built now, runs offline"]
         root["ADK root agent"]
-        stub["Stub model<br/>canned answers"]
+        stub["Stub model<br/>quotes the best passage"]
         files[("data/<br/>4 fictional documents")]
     end
 

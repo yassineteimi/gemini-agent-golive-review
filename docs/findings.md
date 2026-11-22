@@ -15,6 +15,7 @@ Checked on 22 November 2026. Every Google Cloud page cited here showed "Last upd
 | F5 | Agent Runtime, Sessions, Memory Bank, Sandboxes and Agent Gateway aren't offered in `europe-west9` | The agent's state and runtime have to live in another EU region or in `eu` |
 | F6 | Runtime can't use CMEK on the `eu` multi-region endpoint | The bank has to choose between in-EU processing on `eu` and its own keys in a single region |
 | F7 | The docs say ADK agents take their location from `vertexai.init()`; ADK 2.15.0's Gemini model doesn't read it | Set the location through `GOOGLE_CLOUD_LOCATION` or the model's client settings |
+| F8 | The ADK docs moved from `google.github.io/adk-docs` to `adk.dev` | Cite `adk.dev`; older links still redirect |
 
 Phase 0 default for `.env.example`: model `gemini-3.8-flash`, `GOOGLE_CLOUD_LOCATION=eu`. It's GA, it's served on the `eu` multi-region with ML processing kept inside the EU, and it retires no earlier than 2 September 2027. Phase 0 never calls it.
 
@@ -87,3 +88,9 @@ The multi-region page says ADK agents "automatically use the location specified"
 
 - https://docs.cloud.google.com/gemini-enterprise-agent-platform/resources/locations#multi-region-endpoints
 - `google-adk` 2.15.0 source, at the lines above
+
+## F8. ADK docs moved
+
+`https://google.github.io/adk-docs/` now answers with a 301 to `https://adk.dev/`. Old links still work through the redirect, but anything that pins or quotes ADK documentation (ADR 0001 cites `adk.dev/a2a/`) should use the new host.
+
+- `curl -sIL https://google.github.io/adk-docs/` on 22 November 2026: `HTTP/2 301`, `location: https://adk.dev/`
